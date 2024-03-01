@@ -1,0 +1,157 @@
+:root{
+        --base: #020018;
+        --base-gradient: #02001bc3;
+        --light-text: white;
+        --dark-text: #02001b;
+        --fade: #8a8989;
+}
+*{
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--light-text);
+}
+body{
+        background: var(--base);
+}
+nav{
+        background: linear-gradient(to bottom, black 50% , transparent);
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 20px  35%;
+        position: fixed;
+        z-index: 2;
+}
+nav * {
+        text-decoration: none;
+        font-size: 1.5rem;
+}
+.section-1{
+        background-image: url("assets/bg.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        width: 100%;
+        height: calc( 100vw * 9 / 16);
+        margin-bottom: 200px;
+}
+.section-1::before{
+        content: "Learn Programming and coding";
+        position: absolute;
+        top: 0;
+        left:0;
+        width: 100%;
+        height: calc( 100vw * 9 / 16);
+        background: linear-gradient(to bottom, var(--base-gradient) 10%,
+                                             #00000058 60%,
+                                              var(--base-gradient)
+                                             );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 35px;
+}
+
+.info-container{
+        padding: 100px 20%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+}
+.info-container * {
+        width: 400px;
+        font-size: larger;
+}
+
+.info-img{
+        width: 250px;
+}
+
+@keyframes divider {
+        0%      {left: -50px;right: 0;}
+        100%    {left: 0;right: -50px;}
+}
+
+.name-line{
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        padding: 150px 0 ;
+        animation: divider 1s ease-in-out 0s infinite alternate forwards;
+}
+.name-line * {
+        color: var(--fade);
+        font-size: 1.5rem;
+        font-weight: bold;
+}
+
+.cards-container{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 50px 500px ;
+}
+
+.card{
+        width: 200px;
+        height: 430px;
+        border: 1px solid var(--fade);
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+}
+
+.card * {
+        margin: 18px 0;
+        list-style: none;
+}
+
+.button{
+        background: var(--base);
+        border: 1px solid var(--fade);
+        padding: 10px 30px;
+        font-size: 1.2rem;
+        transition: all ease 0.3s;
+}
+.button:hover{
+        background: var(--light-text);
+        color: var(--base);
+        cursor: pointer;
+        box-shadow: 0 0 15px var(--fade);
+}
+
+#active{
+        background: var(--light-text);
+        color: var(--base);
+}
+[type='email']{
+        background: var(--light-text);
+        padding: 10px 30px;
+        font-size: 1.2rem;
+        color: var(--dark-text);
+        width: 500px;
+        border-style: solid;
+}
+
+form{
+        display: flex;
+        justify-content: center;
+        padding: 50px 0;
+}
+
+footer{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+}
+footer hr{
+        width: 70%;
+        margin: 2% 15%;
+}
+footer img{
+        width: 30px;
+        margin: 10px;
+}
